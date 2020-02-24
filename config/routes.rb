@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'cuties#home'
+  root to: 'pages#home'
 
   resources :cuties do
     # collection do
