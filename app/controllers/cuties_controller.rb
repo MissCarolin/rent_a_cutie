@@ -8,6 +8,10 @@ class CutiesController < ApplicationController
   def show
   end
 
+  def type_of
+    @cuties = Cutie.where(race: params[:query])
+  end
+
   def new
     @cutie = Cutie.new
   end
