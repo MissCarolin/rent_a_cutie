@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'cuties#home'
+  root to: 'pages#home'
 
   resources :cuties do
     # collection do
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :bookings do [:index, :show, :edit, :update, :destroy]
-    resources reviews, only: [:new, :create, :index]
+    resources :reviews, only: [:new, :create, :index]
   end
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
