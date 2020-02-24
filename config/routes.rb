@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'bookings/index'
+  get 'bookings/show'
+  get 'bookings/edit'
+  get 'bookings/update'
+  get 'bookings/destroy'
   root to: 'pages#home'
 
   resources :cuties do
