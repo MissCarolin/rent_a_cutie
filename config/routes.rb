@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :cuties do
-    # collection do
-    #   get 'available', to: 'cuties#available'
-    # end
+    collection do
+      get 'type_of', to: 'cuties#type_of'
+    end
     resources :bookings, only: [:new, :create]
   end
   resources :bookings do [:index, :show, :edit, :update, :destroy]
