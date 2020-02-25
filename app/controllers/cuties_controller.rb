@@ -7,6 +7,7 @@ class CutiesController < ApplicationController
 
   def show
     @bookings = @cutie.bookings
+    @booking = Booking.new
   end
 
   def type_of
@@ -50,6 +51,6 @@ class CutiesController < ApplicationController
   end
 
   def cutie_params
-    params.require(:cutie).permit(:name, :type, :description, :booking_rate, photos: [])
+    params.require(:cutie).permit(:name, :type, :description, :species, :booking_rate, photos: [])
   end
 end
