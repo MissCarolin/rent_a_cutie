@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  bevore_action :set_booking
+  before_action :set_booking
 
   def new
     @review = Review.new
@@ -9,9 +9,10 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.booking = @booking
     if @review.save
-    redirect_to booking_path(@booking)
-  else
-    render :new
+      redirect_to booking_path(@booking)
+    else
+      render :new
+    end
   end
 
   private
