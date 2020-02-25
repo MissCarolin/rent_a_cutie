@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 puts 'Deleting Bookings'
 Booking.delete_all
 puts 'Deleting all cuties'
@@ -31,3 +32,4 @@ booking = Booking.create!(user_id: user2.id, cutie_id: cutie.id, start_date: sta
 
 puts 'Creating Reviews'
 review = Review.create!(title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
+
