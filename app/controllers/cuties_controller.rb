@@ -49,6 +49,6 @@ class CutiesController < ApplicationController
   end
 
   def cutie_params
-    params.require(:cuties).permit(:name, :type, :description, :booking_rate)
+    params.require(:cuties).permit(:name, :type, :description, :booking_rate, photos: [])
   end
 end
