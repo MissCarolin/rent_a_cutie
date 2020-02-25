@@ -1,4 +1,4 @@
-<%= simple_form_for [@review, @booking] do |f| %>
+<%= simple_form_for [@booking, @review] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -6,7 +6,7 @@
     <%= f.input :title %>
     <%= f.input :content %>
     <%= f.input :owner_rating %>
-    <%= f.input :cutie_rating %>
+    <%= f.input :animal_rating %>
 
   </div>
 

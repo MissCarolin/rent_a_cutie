@@ -1,3 +1,13 @@
-<h1>@cutie.name</h1>
+<h1> <%= @cutie.name %> </h1>
 
-#something
+
+
+<% @bookings.each do |booking| %>
+
+<% booking.reviews.each do |review| %>
+<ul>
+<li> <%= review.title %></li>
+</ul>
+<% end %>
+
+<% end %>

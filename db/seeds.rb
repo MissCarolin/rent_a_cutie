@@ -7,18 +7,21 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+puts 'Deleting all reviews'
+Review.delete_all
 puts 'Deleting Bookings'
 Booking.delete_all
 puts 'Deleting all cuties'
 Cutie.delete_all
 puts 'Deleting all users'
 User.delete_all
-puts 'Deleting all reviews'
-Review.delete_all
 
 puts 'Creating users'
 user = User.create!(email:"example@test.com", password:"testtest")
 user2 = User.create!(email:"example2@test.com", password:"testtest")
+user3 = User.create!(email:"example3@test.com", password:"testtest")
+user4 = User.create!(email:"example4@test.com", password:"testtest")
+user5 = User.create!(email:"example5@test.com", password:"testtest")
 
 
 puts 'Creating cuties'
@@ -29,7 +32,15 @@ start_date = Date.today
 end_date = start_date + 6
 booking = Booking.create!(user_id: user2.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
 
+start_date = Date.today
+end_date = start_date + 5
+booking = Booking.create!(user_id: user3.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
+
+start_date = Date.today
+end_date = start_date + 8
+booking = Booking.create!(user_id: user4.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
+
 
 puts 'Creating Reviews'
-review = Review.create!(title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
+review = Review.create!(booking_id: booking.id, title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
 

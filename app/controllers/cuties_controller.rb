@@ -6,6 +6,7 @@ class CutiesController < ApplicationController
   end
 
   def show
+    @bookings = @cutie.bookings
   end
 
   def type_of
