@@ -19,8 +19,7 @@ class CutiesController < ApplicationController
 
   def create
     @cutie = Cutie.new(cutie_params)
-    raise
-    @cutie.user = current.user
+    @cutie.user = current_user
     if @cutie.save
       redirect_to cuties_path
     else
@@ -51,6 +50,6 @@ class CutiesController < ApplicationController
   end
 
   def cutie_params
-    params.require(:cuties).permit(:name, :type, :description, :booking_rate, photos: [])
+    params.require(:cutie).permit(:name, :type, :description, :booking_rate, photos: [])
   end
 end
