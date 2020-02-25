@@ -1,3 +1,14 @@
+<h1> <%= @cutie.name %> </h1>
+
+<% @bookings.each do |booking| %>
+
+<% booking.reviews.each do |review| %>
+<ul>
+<li> <%= review.title %></li>
+</ul>
+<% end %>
+
+<% end %>
 <div class="card-booking">
 <%= render "./bookings/booking_form.html.erb", booking: @booking %>
 </div>
