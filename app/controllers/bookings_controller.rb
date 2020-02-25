@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(review_params)
     @booking.cutie = find_cutie
-    @booking.user = find_user
+    @booking.user = current.user
     if @booking.save
       redirect_to bookings_path
     else
@@ -50,10 +50,6 @@ class BookingsController < ApplicationController
 
   def find_cutie
     @cutie = Cutie.find(params[:id])
-  end
-
-  def find_user
-    @user = @cuties.user
   end
 
   def find_booking
