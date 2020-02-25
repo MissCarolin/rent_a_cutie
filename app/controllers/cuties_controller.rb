@@ -1,7 +1,6 @@
 class CutiesController < ApplicationController
-
-  before action:
   before_action :find_cutie, only: [:show ]
+
   def index
     @cuties = Cutie.all
   end
@@ -19,6 +18,8 @@ class CutiesController < ApplicationController
 
   def create
     @cutie = Cutie.new(cutie_params)
+    raise
+    @cutie.user = current.user
     if @cutie.save
       redirect_to cuties_path
     else

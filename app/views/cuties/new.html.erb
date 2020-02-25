@@ -1,5 +1,8 @@
-<%= simple_form_for(cutie) do |f| %>
+<%= simple_form_for(@cutie) do |f| %>
   <!-- [...] -->
+  <%= f.input :name %>
+  <%= f.input :
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <!-- [...] -->
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
 <% end %>
