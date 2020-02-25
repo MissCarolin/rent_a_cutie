@@ -1,15 +1,12 @@
 Rails.application.routes.draw do
-  get 'bookings/index'
-  get 'bookings/show'
-  get 'bookings/edit'
-  get 'bookings/update'
-  get 'bookings/destroy'
+
+  devise_for :users
   root to: 'pages#home'
 
   resources :cuties do
-    # collection do
-    #   get 'available', to: 'cuties#available'
-    # end
+    collection do
+      get 'type_of', to: 'cuties#type_of'
+    end
     resources :bookings, only: [:new, :create]
   end
   resources :bookings do [:index, :show, :edit, :update, :destroy]
