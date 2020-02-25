@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_02_25_104729) do
 
   create_table "cuties", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "species"
     t.string "description"
     t.integer "booking_rate"
     t.bigint "user_id"
