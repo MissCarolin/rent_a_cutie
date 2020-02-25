@@ -13,8 +13,8 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(review_params)
-    @booking.user = find_user
     @booking.cutie = find_cutie
+    @booking.user = find_user
     if @booking.save
       redirect_to bookings_path
     else
@@ -48,12 +48,12 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:user_id, :cutie_id, :start_date, :end_date)
   end
 
-  def find_user
-    @user = User.find(params[:id])
-  end
-
   def find_cutie
     @cutie = Cutie.find(params[:id])
+  end
+
+  def find_user
+    @user = @cuties.user
   end
 
   def find_booking
