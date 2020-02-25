@@ -1,4 +1,5 @@
 class CutiesController < ApplicationController
+
   before action:
   before_action :find_cutie, only: [:show ]
   def index
