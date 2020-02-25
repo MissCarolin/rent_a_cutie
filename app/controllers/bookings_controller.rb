@@ -16,6 +16,7 @@ class BookingsController < ApplicationController
     @booking.cutie = find_cutie
     @booking.user = current.user
     if @booking.save
+      flash[:success] = "You have submited the information successfully!"
       redirect_to bookings_path
     else
       render :new
