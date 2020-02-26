@@ -8,12 +8,12 @@ Rails.application.routes.draw do
   get "dashboard/cuties", to: "dashboard#cuties"
 
   resources :cuties do
+    # resources :bookings, only: [:create]
     collection do
       get 'type_of', to: 'cuties#type_of'
     end
-    resources :bookings, only: [:new, :create]
   end
-  resources :bookings do [:index, :show, :edit, :update, :destroy]
+  resources :bookings, only: [:index, :show, :edit, :update, :destroy, :create] do
     resources :reviews, only: [:new, :create, :index]
   end
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

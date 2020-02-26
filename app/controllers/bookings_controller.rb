@@ -7,17 +7,13 @@ class BookingsController < ApplicationController
     find_booking
   end
 
-  def new
-    @booking = Booking.new
-  end
-
   def create
     @booking = Booking.new(review_params)
-    @booking.cutie = find_cutie
-    @booking.user = current.user
-    if @booking.save
+    @booking.user = current_user
+    # @booking.cutie = review_params[:cutie]
+    if @booking.save!
       flash[:success] = "You have submited the information successfully!"
-      redirect_to bookings_path
+      redirect_to dashboard_path
     else
       render :new
     end
@@ -30,7 +26,7 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.new(review_params)
     if @booking.save
-      redirect_to dashboard_home_path
+      redirect_to dashboard_path
     else
       render :edit
     end
@@ -46,7 +42,7 @@ class BookingsController < ApplicationController
   private
 
   def review_params
-    params.require(:booking).permit(:user_id, :cutie_id, :start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :cutie_id)
   end
 
   def find_cutie

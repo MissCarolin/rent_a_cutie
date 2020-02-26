@@ -10,5 +10,6 @@
 
 <% end %>
 <div class="card-booking">
-<%= render "./bookings/booking_form.html.erb", booking: @booking %>
+<%= render partial:"bookings/booking_form.html.erb", object: @booking, as: :booking %>
+<%#= render "./bookings/booking_form.html.erb", cutie: @cutie, booking: @booking %>
 </div>
