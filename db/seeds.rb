@@ -28,6 +28,7 @@ puts 'Creating cuties'
 cutie = Cutie.create!(name: "Rainer", species: "Manul", description:"Super cute", user_id: user.id)
 
 
+
 start_date = Date.today
 end_date = start_date + 6
 booking = Booking.create!(user_id: user2.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
