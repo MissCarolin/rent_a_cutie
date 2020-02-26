@@ -6,11 +6,11 @@
 
 <div class="container">
    <h1> Meet: <%= @cutie.name %> the <%= @cutie.species %> </h1>
-   <p class="description"> <%= @cutie.description %>  </p>
+   <p class="description"> <%= @cutie.description %> </p>
   <div class="flexbox">
   <%= cl_image_tag @cutie.photos[0].key %>
     <div class="reviews">
-      <h4>What other pet lover say</h4>
+      <h4>What other pet lovers say</h4>
 
         <div class="content_review">
         <% @bookings.each do |booking| %>
