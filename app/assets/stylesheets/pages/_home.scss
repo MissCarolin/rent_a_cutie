@@ -100,3 +100,10 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.logo {
+  background-image: asset-url('logo.png');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
