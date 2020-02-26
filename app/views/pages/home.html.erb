@@ -5,3 +5,12 @@
     <%= link_to "Book cutie", "/cuties", class: "btn btn-flat" %>
   </div>
 </div>
+<div class="container">
+  <% @cuties.each do |c| %>
+    <div class="row">
+        <div class="col-sm-6 col-lg-3 col-xs-12">
+            <%= render 'shared/card',cutie: c %>
+          </div>
+      </div>
+    <% end %>
+</div>
