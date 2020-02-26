@@ -1,6 +1,20 @@
-<h1>Dashboard#home</h1>
-<p>Find me in app/views/dashboard/home.html.erb</p>
+<h1>Hey there</h1>
 
-<% @bookings.each do |booking| %>
-<li><%= booking.cutie %></li>
-<% end %>
+
+<div class="container col-6">
+  <% @bookings.each do |booking| %>
+    <div class="card-booking-dashboard">
+      <%= cl_image_tag(booking.cutie.photos[0].key, crop: :fill, gravity: :face) %>
+      <div class="card-booking-infos">
+        <div>
+          <h2><%= booking.cutie.name %></h2>
+          <p><%= booking.start_date %> <%= booking.end_date %></p>
+        </div>
+        <div class="comment-paw">
+          <%= link_to ('<i class="fas fa-paw"></i>').html_safe, new_booking_review_path(booking) %>
+        </div>
+          <h2 class="card-booking-pricing">150.00 Euro</h2>
+    <% end %>
+  </div>
+</div>
+
