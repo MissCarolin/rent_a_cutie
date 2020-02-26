@@ -25,6 +25,7 @@ user5 = User.create!(email:"example5@test.com", password:"testtest")
 
 
 puts 'Creating cuties'
+
 cutie = Cutie.create(name: "Rainer", species: "Manul", description:"Super cute", user_id: user.id, booking_rate: 40)
 file = URI.open('https://images.unsplash.com/photo-1516321099745-dd759b1ee63a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
 cutie.photos.attach(io: file, filename: 'rainer.jpeg', content_type: 'image/jpeg')
@@ -40,6 +41,8 @@ cutie3.photos.attach(io: file, filename: 'paul.jpeg', content_type: 'image/jpeg'
 cutie4 = Cutie.create(name: "Jana", species: "Alpaka", description:"Loves to go for walks in the park", user_id: user.id, booking_rate: 60)
 file = URI.open('https://images.unsplash.com/photo-1518259102261-b40117eabbc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
 cutie4.photos.attach(io: file, filename: 'jana.jpeg', content_type: 'image/jpeg')
+
+
 
 start_date = Date.today
 end_date = start_date + 6
