@@ -6,22 +6,60 @@ img {
   border-radius: 8px;
 }
 
-
-
-}
-
 .flexbox {
   display: flex;
 }
 
 .reviews {
-    display: block;
+  display: block;
+  margin-left: 20px;
 }
  h1 {
   text-align: center;
   margin: 20px;
+  letter-spacing: 3px;
+
  }
 
 .description {
   text-align: center;
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 30px 0;
+  color: darkslategrey;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.content_review {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 6px;
+  margin-bottom: 40px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.btn.btn-primary {
+  background-color: #f1a3c3;
+  border: #f1a3c3;
+  object-position: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: black;
+}
+
+.content {
+  margin-top: 9px;
+  margin-bottom: 8px;
 }
