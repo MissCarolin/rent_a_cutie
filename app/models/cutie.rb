@@ -6,5 +6,4 @@ class Cutie < ApplicationRecord
   validates :name, presence: true
   validates :species, presence: true
   validates :description, presence: true
-  validates :booking_rate, presence: true
 end
