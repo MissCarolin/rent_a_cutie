@@ -30,7 +30,7 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.new(review_params)
     if @booking.save
-      redirect_to bookings_path
+      redirect_to dashboard_home_path
     else
       render :edit
     end
