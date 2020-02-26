@@ -1,15 +1,35 @@
-<h1> <%= @cutie.name %> </h1>
+<!DOCTYPE html>
+<head>
+  <title></title>
+</head>
+</html>
 
-<% @bookings.each do |booking| %>
+<div class="container">
+   <h1> Meet: <%= @cutie.name %> the <%= @cutie.species %> </h1>
+   <p class="description"> <%= @cutie.description %> </p>
+  <div class="flexbox">
+  <%= cl_image_tag @cutie.photos[0].key %>
+    <div class="reviews">
+      <h4>What other pet lovers say</h4>
 
-<% booking.reviews.each do |review| %>
-<ul>
-<li> <%= review.title %></li>
-</ul>
-<% end %>
+        <div class="content_review">
+        <% @bookings.each do |booking| %>
+        <% booking.reviews.each do |review| %>
 
-<% end %>
-<div class="card-booking">
-<%= render partial:"bookings/booking_form.html.erb", object: @booking, as: :booking %>
-<%#= render "./bookings/booking_form.html.erb", cutie: @cutie, booking: @booking %>
+
+          <p class="title"> <%= review.title %>!</p>
+          <p class="content"><%= review.content %></p>
+        <% end %>
+        <% end %>
+
+        </div>
+        <div class="card-booking">
+          <%= render partial:"bookings/booking_form.html.erb", object: @booking, as: :booking %>
+      </div>
+      </div>
+    </div>
+
 </div>
+
+
+

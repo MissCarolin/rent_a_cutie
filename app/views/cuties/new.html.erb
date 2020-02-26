@@ -1,14 +1,22 @@
-<h1>You have a cutie to rent?</h1>
-<h2>Great! <br>
 
-Sign it up here:</h2>
+<div class="container">
+  <div class="column">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <h1>You have a cutie to rent?</h1>
+        <h2>Great! Sign it up here:</h2>
 
-<%= simple_form_for(@cutie) do |f| %>
-  <!-- [...] -->
-  <%= f.input :name %>
-  <%= f.input :species %>
-  <%= f.input :description %>
-  <%= f.input :booking_rate %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
-<% end %>
+        <%= simple_form_for(@cutie) do |f| %>
+          <!-- [...] -->
+          <%= f.input :name %>
+          <%= f.input :species %>
+          <%= f.input :description %>
+          <%= f.input :booking_rate %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.submit %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+</div>

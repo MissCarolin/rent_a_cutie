@@ -1,12 +1,13 @@
-<div class="card-trip">
-  <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> -->
-  <%= cl_image_tag cutie.photos[0].key %>
-  <div class="card-trip-infos">
-    <div>
-      <h2>call me <%= cutie.name.upcase! %></h2>
-      <p><%= cutie.description %></p>
+<%= link_to cuty_path(cutie) do %>
+  <div class="card-trip">
+    <%= cl_image_tag(cutie.photos[0].key, crop: :fill, gravity: :face) %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= cutie.name.upcase! %> the <%= cutie.species %></h2>
+        <p><%= cutie.description %></p>
+      </div>
+      <h2 class="card-trip-pricing"><%= cutie.booking_rate %>$/day</h2>
     </div>
-    <h2 class="card-trip-pricing"><%= cutie.booking_rate %></h2>
-    <!-- <p cl_image_tag "VpG5GBffQYJr8eELY7TDW1NS", class="card-trip-user avatar-bordered"> -->
   </div>
-</div>
+<% end %>
+
