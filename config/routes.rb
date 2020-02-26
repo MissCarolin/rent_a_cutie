@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  # User Dashboard roots
+  get "dashboard/home", to: "dashboard#home", as: "dashboard"
+  get "dashboard/cuties", to: "dashboard#cuties"
+
   resources :cuties do
     collection do
       get 'type_of', to: 'cuties#type_of'
