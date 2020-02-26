@@ -43,6 +43,7 @@ file = URI.open('https://images.unsplash.com/photo-1518259102261-b40117eabbc9?ix
 cutie4.photos.attach(io: file, filename: 'jana.jpeg', content_type: 'image/jpeg')
 
 
+
 start_date = Date.today
 end_date = start_date + 6
 booking = Booking.create!(user_id: user2.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
