@@ -5,25 +5,30 @@
 </html>
 
 <div class="container">
-   <h1> <%= @cutie.name %> </h1>
-   <p class="description"> The <%= @cutie.description %> <%= @cutie.species %> </p>
+   <h1> Meet: <%= @cutie.name %> </h1>
+   <p class="description"> <%= @cutie.description %> <%= @cutie.species %> </p>
   <div class="flexbox">
   <%= cl_image_tag @cutie.photos[0].key %>
     <div class="reviews">
       <h4>What other pet lover said</h4>
 
+        <div class="content_review">
         <% @bookings.each do |booking| %>
         <% booking.reviews.each do |review| %>
 
-          <p class="title"> <%= review.title %></p>
+          <p class="title"> <%= review.title %>!</p>
           <p class="content"><%= review.content %></p>
         <% end %>
         <% end %>
+
+
+        </div>
+        <div class="card-booking">
+          <%= render "./bookings/booking_form.html.erb", booking: @booking %>
+      </div>
       </div>
     </div>
 </div>
 
 
-<div class="card-booking">
-  <%= render "./bookings/booking_form.html.erb", booking: @booking %>
-</div>
+
