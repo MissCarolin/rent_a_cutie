@@ -1,6 +1,6 @@
 <div class="card-trip">
   <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> -->
-  <%= cl_image_tag cutie.photos[0].key %>
+  <%= cl_image_tag(cutie.photos[0].key, crop: :fill, gravity: :face) %>
   <div class="card-trip-infos">
     <div>
       <h2>call me <%= cutie.name.upcase! %></h2>
