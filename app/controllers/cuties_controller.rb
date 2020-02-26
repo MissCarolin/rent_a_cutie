@@ -8,6 +8,7 @@ class CutiesController < ApplicationController
   def show
     @bookings = @cutie.bookings
     @booking = Booking.new
+    @booking.cutie = @cutie
   end
 
   def type_of

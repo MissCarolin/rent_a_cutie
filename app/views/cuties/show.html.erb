@@ -16,18 +16,19 @@
         <% @bookings.each do |booking| %>
         <% booking.reviews.each do |review| %>
 
+
           <p class="title"> <%= review.title %>!</p>
           <p class="content"><%= review.content %></p>
         <% end %>
         <% end %>
 
-
         </div>
         <div class="card-booking">
-          <%= render "./bookings/booking_form.html.erb", booking: @booking %>
+          <%= render partial:"bookings/booking_form.html.erb", object: @booking, as: :booking %>
       </div>
       </div>
     </div>
+
 </div>
 
 
