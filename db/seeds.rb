@@ -31,7 +31,7 @@ file = URI.open('https://images.unsplash.com/photo-1516321099745-dd759b1ee63a?ix
 cutie.photos.attach(io: file, filename: 'rainer.jpeg', content_type: 'image/jpeg')
 
 cutie2 = Cutie.create(name: "Stef", species: "Sloth", description:"A real Diva!", user_id: user.id, booking_rate: 50)
-file = URI.open('https://thumbs.dreamstime.com/z/sloth-smiling-you-sloth-just-staring-smiling-me-116009178.jpg')
+file = URI.open('https://cdn.pixabay.com/photo/2016/12/03/15/11/sloth-1879999__340.jpg')
 cutie2.photos.attach(io: file, filename: 'stef.jpeg', content_type: 'image/jpeg')
 
 cutie3 = Cutie.create(name: "Paul", species: "Panda", description:"Loves to play with autumn leaves!", user_id: user.id, booking_rate: 70)
