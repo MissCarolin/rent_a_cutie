@@ -1,10 +1,16 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "dominik-lange-Lion.jpg" %>')">
-  <div class="container">
-    <h1><strong>Relax</strong> you must – end of the world is not.</h1>
+  <div class="container-home">
+    <h1>Relax you must – end of the world is not.</h1>
     <p>Learn how to unwind with a cutie you want</p>
-    <%= link_to "Book cutie", "/cuties", class: "btn btn-flat" %>
-  </div>
+
+    <%= simple_form_for :search, url: cuties_path, method: :get do |f| %>
+    <div class="search-form-control form-group">
+    <input class="form-control string required" input="search" placeholder="find a furry friend" name="search[query]" id="search_query">
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Find cutie
+    </button>
 </div>
+<% end %>
 
 <div class="container">
   <div class="row">
@@ -15,3 +21,4 @@
     <% end %>
   </div>
 </div>
+
