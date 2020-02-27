@@ -1,7 +1,7 @@
 <!-- this file is only used for testing the booking form -->
 <!-- the actual form is in the parcel _booking_form.html.erb -->
 
-<div class="container">
+<div class="container" data-unavailable="<%= @developer.unavailable_dates.to_json %>" >
   <div class="form-wrapper " style="height: 200px; width: 300px; margin: 0 auto;">
     <%= simple_form_for @booking do |f| %>
       <%= f.input :start_date, as: :string, required: false, input_html: {id: "range_start"} %>
