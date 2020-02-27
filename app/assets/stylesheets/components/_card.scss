@@ -1,37 +1,51 @@
 .card-trip {
   margin-top: 20px;
+  margin-bottom: 20px;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  a {
-  $color: $gunmetal;
-  }
+  height: 280px;
+
+  /*position: relative;*/
+  /*display: flex;*/
+  /*align-items: flex-end;*/
   img {
-  height: 200px;
-  width: 100%;
+    height: 200px;
+    width: 100%;
     object-fit: cover;
+    padding: 7px;
+    border-radius: 0px;
+    box-shadow: 0 0 0px rgba(0,0,0,0.2);
   }
+
   h2 {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
+    padding: 10;
   }
+
   p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
+    font-size: 12px;
+    opacity: .7;
+    margin: 0;
+  }
+  .test {
+    /*display: flex;*/
+    align-items: flex-end;
+    padding-bottom: 0px;
   }
   .card-trip-infos {
-    padding: 16px;
+    padding: 19px 9px 9px 9px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
   }
   .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+    position: absolute;
+    right: 16px;
+    top: -20px;
+    width: 40px;
   }
 }
