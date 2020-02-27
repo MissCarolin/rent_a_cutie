@@ -42,7 +42,21 @@ cutie4 = Cutie.create(name: "Jana", species: "Alpaka", description:"Loves to go 
 file = URI.open('https://res.cloudinary.com/frieda/image/upload/v1582728788/31ctb8cexTDFzfDxYFJ3EQDM.jpg')
 cutie4.photos.attach(io: file, filename: 'jana.jpeg', content_type: 'image/jpeg')
 
+cutie5 = Cutie.create(name: "Ruby", species: "Elephant", description:"I love pools and if someone brushes my back", user_id: user.id, booking_rate: 120)
+file = URI.open('')
+cutie5.photos.attach(io: file, filename: 'ruby.jpeg', content_type: 'image/jpeg')
 
+cutie6 = Cutie.create(name: "Adriana", species: "Snake", description:"You can give me some mice", user_id: user.id, booking_rate: 29)
+file = URI.open('')
+cutie6.photos.attach(io: file, filename: 'Adriana.jpeg', content_type: 'image/jpeg')
+
+cutie7 = Cutie.create(name: "Biggi", species: "Koala", description:"Let me sleep so I can relax you", user_id: user.id, booking_rate: 459)
+file = URI.open('')
+cutie7.photos.attach(io: file, filename: 'Biggi.jpeg', content_type: 'image/jpeg')
+
+cutie8 = Cutie.create(name: "Wolfi", species: "Lemur", description:"I can hipnotize with my eyes", user_id: user.id, booking_rate: 99)
+file = URI.open('')
+cutie8.photos.attach(io: file, filename: 'Wolfi.jpeg', content_type: 'image/jpeg')
 
 
 
