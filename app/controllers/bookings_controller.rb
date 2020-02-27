@@ -16,7 +16,8 @@ class BookingsController < ApplicationController
       flash[:success] = "You have submited the information successfully!"
       redirect_to dashboard_path
     else
-      render partial:"bookings/booking_form.html.erb"
+      @bookings = Booking.all
+      render 'cuties/show'
     end
   end
 
