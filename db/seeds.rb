@@ -39,8 +39,10 @@ file = URI.open('https://images.unsplash.com/photo-1525382455947-f319bc05fb35?ix
 cutie3.photos.attach(io: file, filename: 'paul.jpeg', content_type: 'image/jpeg')
 
 cutie4 = Cutie.create(name: "Jana", species: "Alpaka", description:"Loves to go for walks in the park", user_id: user.id, booking_rate: 60)
-file = URI.open('https://images.unsplash.com/photo-1518259102261-b40117eabbc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
+file = URI.open('https://res.cloudinary.com/frieda/image/upload/v1582728788/31ctb8cexTDFzfDxYFJ3EQDM.jpg')
 cutie4.photos.attach(io: file, filename: 'jana.jpeg', content_type: 'image/jpeg')
+
+
 
 
 
