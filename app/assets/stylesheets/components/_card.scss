@@ -6,6 +6,9 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   height: 280px;
 
+  /*position: relative;*/
+  /*display: flex;*/
+  /*align-items: flex-end;*/
   img {
     height: 200px;
     width: 100%;
@@ -27,11 +30,13 @@
     opacity: .7;
     margin: 0;
   }
-  .card-trip-infos {
-    padding-top: 9px;
-    padding-right: 9px;
-    padding-left: 9px;
+  .test {
+    /*display: flex;*/
+    align-items: flex-end;
     padding-bottom: 0px;
+  }
+  .card-trip-infos {
+    padding: 19px 9px 9px 9px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
