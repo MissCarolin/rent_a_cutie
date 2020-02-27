@@ -17,7 +17,9 @@
 @import 'jquery-ui/datepicker.css';
 @import 'jquery-ui/theme.css';
 
-a, a:hover {
+a {
   color: $gunmetal;
 }
-
+a:hover {
+  color: $gunmetal;
+}
