@@ -1,4 +1,4 @@
-img {
+.foto {
   display: block;
   width: 800px;
   object-fit: cover;
@@ -13,6 +13,7 @@ img {
 .reviews {
   display: block;
   margin-left: 20px;
+  margin-top: 50px;
 }
  h1 {
   text-align: center;
@@ -57,15 +58,43 @@ h4 {
   object-position: center;
   padding-top: 2px;
   padding-bottom: 2px;
-  color: black;
+  color: white;
 }
 
 .content {
   margin-top: 9px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-size: 18px;
 }
 
 .string.optional {
   font-size: 17px;
 }
+
+.icons {
+  width: 10%;
+
+}
+
+.p {
+  width: 10%;
+  margin: 4px;
+}
+
+@media(max-width: 768px) {
+  .foto {width: 500px;
+      margin: 0 auto;
+  }
+  .flexbox {
+    display: block;
+
+  }
+  .form-wrapper {
+    margin: 0 auto;
+
+  }
+  .card-booking {
+    margin-top: 25px;
+  }
+}
+

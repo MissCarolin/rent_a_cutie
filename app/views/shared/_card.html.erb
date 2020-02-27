@@ -1,12 +1,15 @@
 <%= link_to cuty_path(cutie) do %>
   <div class="card-trip">
     <%= cl_image_tag(cutie.photos[0].key, crop: :fill, gravity: :face) %>
-    <div class="card-trip-infos">
-      <div>
-        <h2><%= cutie.name.upcase! %> the <%= cutie.species %></h2>
-        <p><%= cutie.description %></p>
+    <div class='test'>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= cutie.name.upcase! %> the <%= cutie.species %></h2>
+          <p><%= cutie.description %></p>
+        </div>
+        <h2 class="card-trip-pricing"><%= cutie.booking_rate %>$/day</h2>
       </div>
-      <h2 class="card-trip-pricing"><%= cutie.booking_rate %>$/day</h2>
+
     </div>
   </div>
 <% end %>
