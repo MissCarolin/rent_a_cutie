@@ -8,14 +8,15 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @cutie = Cutie.find(params["booking"]["cutie_id"])
     @booking = Booking.new(review_params)
     @booking.user = current_user
     # @booking.cutie = review_params[:cutie]
-    if @booking.save!
+    if @booking.save
       flash[:success] = "You have submited the information successfully!"
       redirect_to dashboard_path
     else
-      render :new
+      render partial:"bookings/booking_form.html.erb"
     end
   end
 
