@@ -2,7 +2,13 @@ class CutiesController < ApplicationController
   before_action :find_cutie, only: [:show ]
 
   def index
-    @cuties = Cutie.all
+    if params[:search].present? && params[:search][:query].present?
+      user_input = params[:search][:query]
+      sql_query = "name ILIKE :query OR species ILIKE :query"
+      @cuties = Cutie.where(sql_query, query: "#{user_input}")
+    else
+      @cuties = Cutie.all
+    end
   end
 
   def show
@@ -12,7 +18,7 @@ class CutiesController < ApplicationController
   end
 
   def type_of
-    @cuties = Cutie.where(race: params[:query])
+    @cuties = Cutie.where(species: params[:query])
   end
 
   def new
