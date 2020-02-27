@@ -1,20 +1,39 @@
 <h1>Hey there</h1>
 
-
-<div class="container col-4">
-  <% @bookings.each do |booking| %>
-    <div class="card-booking-dashboard">
-      <%= cl_image_tag(booking.cutie.photos[0].key, crop: :fill, gravity: :face) %>
-      <div class="card-booking-infos">
-        <div>
-          <h2><%= booking.cutie.name %></h2>
-          <p><%= booking.start_date %> <%= booking.end_date %></p>
+<section>
+<!-- Site Container -->
+<div class="container">
+  <!-- Profile Summary Container -->
+  <div class="row justify-content-between">
+    <aside class="col-4">
+      <div class="sticky sticky-with-header sticky-top">
+        <div class="card-profile"> <!-- style="width: 16rem;" -->
+          <img class="profile-picure" src="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9&fm=jpg&fit=crop&w=1080&q=80&fit=max" alt="Your Profile Image">
+          <div class="card-body">
+            <h5 class="card-title">Profile</h5>
+            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h6 class="text-link">Edit  <i class="fas fa-pen"></i></h6>
+          </div>
         </div>
-        <div class="comment-paw">
-          <%= link_to ('<i class="fas fa-paw"></i>').html_safe, new_booking_review_path(booking) %>
-        </div>
-          <h2 class="card-booking-pricing">150.00 Euro</h2>
       </div>
-    <% end %>
+    </aside>
+  <!-- Container with Bookings -->
+    <div class="container col-6">
+      <% @bookings.each do |booking| %>
+        <div class="card-bookings-dashboard">
+          <%= cl_image_tag(booking.cutie.photos[0].key, class: "card-image", crop: :fill ,gravity: :face) %>
+          <div class="card-booking-infos">
+            <div>
+              <h2><%= booking.cutie.name %></h2>
+              <p><%= booking.start_date %> <%= booking.end_date %></p>
+            </div>
+            <div class="comment-paw">
+              <%= link_to ('Create Review <i class="fas fa-paw"></i>').html_safe, new_booking_review_path(booking), class: "create-review" %>
+            </div>
+              <h2 class="card-booking-pricing">150.00 Euro</h2>
+          </div>
+        <% end %>
+    </div>
+  </div>
 </div>
-
+</section>
