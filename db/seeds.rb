@@ -59,17 +59,17 @@ cutie4.photos.attach(io: file, filename: 'jana.jpeg', content_type: 'image/jpeg'
 # cutie8.photos.attach(io: file, filename: 'Wolfi.jpeg', content_type: 'image/jpeg')
 
 
-
-start_date = Date.today
+puts 'Creating Bookings'
+start_date = Date.today + 600
 end_date = start_date + 6
 booking = Booking.create!(user_id: user2.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
 
-start_date = Date.today
+start_date = Date.today + 500
 end_date = start_date + 5
 booking = Booking.create!(user_id: user3.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
 
-start_date = Date.today
-end_date = start_date + 8
+start_date = Date.today + 400
+end_date = start_date + 4
 booking = Booking.create!(user_id: user4.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
 
 

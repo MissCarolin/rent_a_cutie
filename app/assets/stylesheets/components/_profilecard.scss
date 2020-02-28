@@ -1,0 +1,21 @@
+.card-profile {
+  overflow: hidden;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  p {
+    font-size: 16px;
+  }
+  .profile-picure {
+    width: 100%;
+    height: 180px;
+  }
+  .text-link{
+     color: #f4bbd3
+  }
+  .fa-pen {
+    font-size: 14px;
+    color: #f4bbd3
+  }
+}
