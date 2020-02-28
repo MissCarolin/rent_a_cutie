@@ -6,10 +6,14 @@ class CutiesController < ApplicationController
       user_input = params[:search][:query]
       sql_query = "name ILIKE :query OR species ILIKE :query"
       @cuties = Cutie.where(sql_query, query: "#{user_input}")
+      @cuties.geocoded
+
     else
-      @cuties = Cutie.all
+
+      @cuties = Cutie.all.geocoded
     end
-      @cuties = Cutie.geocoded #returns cuties with coordinates
+
+       #returns cuties with coordinates
 
     @markers = @cuties.map do |cutie|
       {
