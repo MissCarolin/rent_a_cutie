@@ -1,4 +1,6 @@
 import "bootstrap";
+import toggleDateInputs from "../plugins/flatpickr";
+toggleDateInputs();
 import "plugins/flatpickr";
 import "../bookings.js";
 
