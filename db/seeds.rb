@@ -26,19 +26,19 @@ user5 = User.create!(email:"example5@test.com", password:"testtest")
 
 puts 'Creating cuties'
 
-cutie = Cutie.create(name: "Rainer", species: "Manul", description:"Super cute", user_id: user.id, booking_rate: 40)
+cutie = Cutie.create(name: "Rainer", species: "Manul", description:"Super cute", user_id: user.id, booking_rate: 40, location: "Hardenbergplatz 8, 10787 Berlin")
 file = URI.open('https://images.unsplash.com/photo-1516321099745-dd759b1ee63a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')
 cutie.photos.attach(io: file, filename: 'rainer.jpeg', content_type: 'image/jpeg')
 
-cutie2 = Cutie.create(name: "Stef", species: "Sloth", description:"A real Diva!", user_id: user.id, booking_rate: 50)
+cutie2 = Cutie.create(name: "Stef", species: "Sloth", description:"A real Diva!", user_id: user.id, booking_rate: 50, location: "Riehler Str. 173, 50735 Köln")
 file = URI.open('https://cdn.pixabay.com/photo/2016/12/03/15/11/sloth-1879999__340.jpg')
 cutie2.photos.attach(io: file, filename: 'stef.jpeg', content_type: 'image/jpeg')
 
-cutie3 = Cutie.create(name: "Paul", species: "Panda", description:"Loves to play with autumn leaves!", user_id: user.id, booking_rate: 70)
+cutie3 = Cutie.create(name: "Paul", species: "Panda", description:"Loves to play with autumn leaves!", user_id: user.id, booking_rate: 70, location: "Lokstedter Grenzstraße 2, 22527 Hamburg")
 file = URI.open('https://images.unsplash.com/photo-1525382455947-f319bc05fb35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=814&q=80')
 cutie3.photos.attach(io: file, filename: 'paul.jpeg', content_type: 'image/jpeg')
 
-cutie4 = Cutie.create(name: "Jana", species: "Alpaka", description:"Loves to go for walks in the park", user_id: user.id, booking_rate: 60)
+cutie4 = Cutie.create(name: "Jana", species: "Alpaka", description:"Loves to go for walks in the park", user_id: user.id, booking_rate: 60, location: "Tierparkstraße 30, 81543 München")
 file = URI.open('https://res.cloudinary.com/frieda/image/upload/v1582728788/31ctb8cexTDFzfDxYFJ3EQDM.jpg')
 cutie4.photos.attach(io: file, filename: 'jana.jpeg', content_type: 'image/jpeg')
 
