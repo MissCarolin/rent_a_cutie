@@ -66,13 +66,26 @@ booking = Booking.create!(user_id: user2.id, cutie_id: cutie.id, start_date: sta
 
 start_date = Date.today + 500
 end_date = start_date + 5
-booking = Booking.create!(user_id: user3.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
+booking1 = Booking.create!(user_id: user3.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
 
 start_date = Date.today + 400
 end_date = start_date + 4
-booking = Booking.create!(user_id: user4.id, cutie_id: cutie.id, start_date: start_date, end_date: end_date)
+booking3 = Booking.create!(user_id: user4.id, cutie_id: cutie2.id, start_date: start_date, end_date: end_date)
+
+start_date = Date.today + 700
+end_date = start_date + 8
+booking4 = Booking.create!(user_id: user4.id, cutie_id: cutie2.id, start_date: start_date, end_date: end_date)
 
 
 puts 'Creating Reviews'
 review = Review.create!(booking_id: booking.id, title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
+review1 = Review.create!(booking_id: booking1.id, title: "A grumpy Cutie", content: "In the beginning a bit grumpy but soon very loving. If you like cats you will love Rainer!", owner_rating: 5, animal_rating: 4)
+review2 = Review.create!(booking_id: booking3.id, title: "So special!", content: "Treat yourself to a special favor and book Stef! You won't regret it", owner_rating: 3, animal_rating: 4)
+review3 = Review.create!(booking_id: booking4.id, title: "Sloth-tastik", content: "I needed someone to calm me down after a stressfull Bootcamp and Stef really did the Job.", owner_rating: 5, animal_rating: 3)
+# review4 = Review.create!(booking_id: booking1.id, title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
+# review5 = Review.create!(booking_id: booking1.id, title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
+# review6 = Review.create!(booking_id: booking1.id, title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
+
+
+
 
