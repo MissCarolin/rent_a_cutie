@@ -1,10 +1,9 @@
-
 <div class="container" data-unavailable="<%= @cutie.unavailable_dates.to_json %>" >
   <div class="form-wrapper " style="height: 200px; width: 300px; margin: 0 auto;">
     <%= simple_form_for [@cutie, @booking] do |f| %>
-      <%= f.input :start_date, as: :string, placeholder: "From", input_html: {id: "range_start"} %>
+      <%= f.input :start_date, as: :string, input_html: {id: "range_start"} %>
       <%#= f.input :start_date, as: :string, label: "Dates", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" } %>
-      <%= f.input :end_date, as: :string, placeholder: "To", input_html: {id: "range_end"} %>
+      <%= f.input :end_date, as: :string, input_html: {id: "range_end"} %>
       <%#= f.input :end_date, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" } %>
       <%= f.submit "Book Me", class: "btn btn-primary"  %>
       <div class="widget-content" data-unavailable="<%= @cutie.unavailable_dates.to_json %>"></div>
