@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "dominik-lange-Lion.jpg" %>')">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "lion.jpg" %>')">
   <div class="container-home">
     <h1>Relax you must – end of the world is not.</h1>
     <p>Learn how to unwind with a cutie you want</p>
@@ -18,9 +18,10 @@
     <% @cuties.each do |c| %>
         <div class="col-sm-6 col-lg-3 col-xs-12">
             <%= render 'shared/card',cutie: c %>
-         </div>
-      <% end %>
-    </div>
+        </div>
+    <% end %>
+  </div>
+
 </div>
 
 
