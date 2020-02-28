@@ -1,8 +1,8 @@
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  min-height: 70px;
+  margin-top: 100px;
+  background-color: #28364f;
+  padding-top: 35px;
   font-family: $headers-font;
   background: #F4F4F4;
   display: flex;
