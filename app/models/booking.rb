@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
-  belongs_to :cutie
+  belongs_to :cutie# , counter_cache: true
   has_many :reviews
   validates :start_date, :end_date, presence: true, availability: true
   validate :end_date_after_start_date
