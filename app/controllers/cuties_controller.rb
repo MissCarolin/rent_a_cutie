@@ -9,6 +9,15 @@ class CutiesController < ApplicationController
     else
       @cuties = Cutie.all
     end
+      @cuties = Cutie.geocoded #returns cuties with coordinates
+
+    @markers = @cuties.map do |cutie|
+      {
+        lat: cutie.latitude,
+        lng: cutie.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { cutie: cutie })
+      }
+    end
   end
 
   def show
