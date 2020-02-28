@@ -8,10 +8,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @cutie = Cutie.find(params["booking"]["cutie_id"])
+    @cutie = Cutie.find(params[:cuty_id])
     @booking = Booking.new(review_params)
     @booking.user = current_user
-    # @booking.cutie = review_params[:cutie]
+    @booking.cutie = @cutie
     if @booking.save
       flash[:success] = "You have submited the information successfully!"
       redirect_to dashboard_path

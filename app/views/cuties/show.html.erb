@@ -20,16 +20,15 @@
               <div class="content_review">
                 <% @bookings.each do |booking| %>
                 <% booking.reviews.each do |review| %>
-              <div class="container">
-             <div class="row">
-            <% review.animal_rating. times do %>
-            <p class="p"><%= image_tag "fullheart.svg" %></p>
-              <% end %>
-            </div>
-            </div>
-
-                  <p class="title"> <%= review.title %>!</p>
-                  <p class="content"><%= review.content %></p>
+                <div class="container">
+                  <div class="row">
+                    <% review.animal_rating. times do %>
+                    <p class="p"><%= image_tag "fullheart.svg" %></p>
+                    <% end %>
+                  </div>
+                </div>
+              <p class="title"> <%= review.title %>!</p>
+              <p class="content"><%= review.content %></p>
           <% end %>
           <% end %>
         </div>
