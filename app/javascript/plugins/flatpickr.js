@@ -20,7 +20,7 @@ function toggleDateInputs() {
   }
 }
 
-export default toggleDateInputs;
+export { toggleDateInputs };
 
 // app/javascript/plugins/flatpickr.js
 // import flatpickr from "flatpickr"
