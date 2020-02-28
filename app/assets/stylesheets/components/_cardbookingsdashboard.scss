@@ -6,6 +6,8 @@
   .card-image {
     height: 250px;
     width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
   h2 {
   font-size: 20px;
@@ -37,11 +39,11 @@
     color: #f4bbd3;
   }
 
-  .create-review .fa-paw, a {
+  a {
     color: #f4bbd3;
     opacity:.5;
   }
-  .create-review .fa-paw:hover, a {
+  a:hover {
     color: #f4bbd3;
     opacity: 1;
 }

@@ -1,0 +1,19 @@
+
+.tabs-underlined {
+    display: flex;
+    align-items: center;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+
+.tab-in-list {
+  margin-right: 10px;
+  margin-left: 10px;
+}
