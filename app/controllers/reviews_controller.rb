@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    @cutie = Cutie.find(@booking[:cutie_id])
   end
 
   def create
