@@ -42,7 +42,7 @@ cutie4 = Cutie.create(name: "Jana", species: "Alpaka", description:"Loves to go 
 file = URI.open('https://res.cloudinary.com/frieda/image/upload/v1582728788/31ctb8cexTDFzfDxYFJ3EQDM.jpg')
 cutie4.photos.attach(io: file, filename: 'jana.jpeg', content_type: 'image/jpeg')
 
-# cutie5 = Cutie.create(name: "Ruby", species: "Elephant", description:"I love pools and if someone brushes my back", user_id: user.id, booking_rate: 120)
+# cutie5 = Cutie.create(name: "Ruby", species: "Koala", description:"I love pools and if someone brushes my back", user_id: user.id, booking_rate: 120)
 # file = URI.open('')
 # cutie5.photos.attach(io: file, filename: 'ruby.jpeg', content_type: 'image/jpeg')
 
@@ -50,13 +50,13 @@ cutie4.photos.attach(io: file, filename: 'jana.jpeg', content_type: 'image/jpeg'
 # file = URI.open('')
 # cutie6.photos.attach(io: file, filename: 'Adriana.jpeg', content_type: 'image/jpeg')
 
-# cutie7 = Cutie.create(name: "Biggi", species: "Koala", description:"Let me sleep so I can relax you", user_id: user.id, booking_rate: 459)
-# file = URI.open('')
-# cutie7.photos.attach(io: file, filename: 'Biggi.jpeg', content_type: 'image/jpeg')
+cutie5 = Cutie.create(name: "Biggi", species: "Koala", description:"Let me sleep so I can relax you", user_id: user.id, booking_rate: 459, location: "Bernhard-Grzimek-Allee 1, 60316 Frankfurt am Main")
+file = URI.open('https://images.unsplash.com/photo-1504575958497-ccdd586c2997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2254&q=80')
+cutie5.photos.attach(io: file, filename: 'Biggi.jpeg', content_type: 'image/jpeg')
 
-# cutie8 = Cutie.create(name: "Wolfi", species: "Lemur", description:"I can hipnotize with my eyes", user_id: user.id, booking_rate: 99)
-# file = URI.open('')
-# cutie8.photos.attach(io: file, filename: 'Wolfi.jpeg', content_type: 'image/jpeg')
+cutie6 = Cutie.create(name: "Wolfi", species: "Lemur", description:"I can hipnotize with my eyes", user_id: user.id, booking_rate: 99, location: "Am Zoopark 1, 99087 Erfurt")
+file = URI.open('https://images.unsplash.com/photo-1557079582-afcf05e8e474?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')
+cutie6.photos.attach(io: file, filename: 'Wolfi.jpeg', content_type: 'image/jpeg')
 
 
 puts 'Creating Bookings'
