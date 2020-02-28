@@ -2,7 +2,22 @@ class CutiesController < ApplicationController
   before_action :find_cutie, only: [:show ]
 
   def index
-    @cuties = Cutie.all
+    if params[:search].present? && params[:search][:query].present?
+      user_input = params[:search][:query]
+      sql_query = "name ILIKE :query OR species ILIKE :query"
+      @cuties = Cutie.where(sql_query, query: "#{user_input}")
+    else
+      @cuties = Cutie.all
+    end
+      @cuties = Cutie.geocoded #returns cuties with coordinates
+
+    @markers = @cuties.map do |cutie|
+      {
+        lat: cutie.latitude,
+        lng: cutie.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { cutie: cutie })
+      }
+    end
   end
 
   def show
@@ -12,7 +27,7 @@ class CutiesController < ApplicationController
   end
 
   def type_of
-    @cuties = Cutie.where(race: params[:query])
+    @cuties = Cutie.where(species: params[:query])
   end
 
   def new

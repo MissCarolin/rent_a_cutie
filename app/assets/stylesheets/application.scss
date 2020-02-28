@@ -10,7 +10,15 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/navbar";
+@import "components/footer";
 @import "pages/index";
+@import "components/card";
+@import "components/cardbookingsdashboard";
+@import "components/profilecard";
+@import "components/alert";
+@import "components/avatar";
+
 
 // For Bookinks: datepicker gems
 @import 'jquery-ui/core.css';
@@ -18,5 +26,8 @@
 @import 'jquery-ui/theme.css';
 
 a {
+  color: $gunmetal;
+}
+a:hover {
   color: $gunmetal;
 }
