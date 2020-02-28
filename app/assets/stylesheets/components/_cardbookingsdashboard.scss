@@ -33,6 +33,13 @@
     width: 115px;
   }
 
+  .edit-paw {
+    position: absolute;
+    right: -60px;
+    top: 1px;
+    width: 115px;
+  }
+
   }
   .create-review {
     font-size: 14px;
@@ -43,6 +50,7 @@
     color: #f4bbd3;
     opacity:.5;
   }
+
   a:hover {
     color: #f4bbd3;
     opacity: 1;

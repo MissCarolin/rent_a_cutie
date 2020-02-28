@@ -15,7 +15,9 @@
     color: #f4bbd3
   }
   .avatar-profile {
+    height: 180px !important;
     width: 180px !important;
+    object-fit: cover;
     border-radius: 50% !important;
     margin: 16px auto;
     display: block !important;

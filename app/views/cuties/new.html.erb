@@ -12,8 +12,8 @@
           <%= f.input :species %>
           <%= f.input :description %>
           <%= f.input :booking_rate %>
-          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-          <%= f.submit %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true }, class: "btn btn-primary" %>
+          <%= f.button :submit, class: "btn btn-primary" %>
       </div>
     </div>
   </div>

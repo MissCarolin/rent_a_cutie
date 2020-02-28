@@ -1,3 +1,55 @@
 <h1>The Cuddle Zone</h1>
 
 
+<!-- Site Container -->
+<div class="container">
+  <!-- Profile Summary Container -->
+  <div class="row">
+    <aside class="col-4">
+      <div class="sticky sticky-with-header sticky-top">
+        <div class="container">
+          <div class="user-greeting"><p>Hey there, you need a hug!</p></div>
+        </div>
+        <section>
+        <div class="card-profile"> <!-- style="width: 16rem;" -->
+          <%= image_tag "https://images.unsplash.com/photo-1518259102261-b40117eabbc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", class: "avatar-profile" %>
+          <div>
+            <div class="seperator"><hr></div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Profile</h5>
+            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h6 class="text-link">Edit  <i class="fas fa-pen"></i></h6>
+          </div>
+            <div class="seperator"><hr></div>
+        </div>
+      </div>
+    </aside>
+  <!-- Container with Bookings -->
+    <div class="col-8">
+      <div class="container d-flex justify-content-end">
+        <%= link_to ('<i class="fas fa-plus-circle"></i>').html_safe, new_cuty_path, class: "btn btn-primary" %>
+      </div>
+        <ul class="list-inline tabs-underlined justify-content-center">
+          <li class="tab-in-list">
+            <%= link_to "Bookings", dashboard_path, class: "tab-underlined" %>
+          </li>
+          <li class="tab-in-list">
+            <%= link_to "Cuties", dashboard_cuties_path, class: "tab-underlined active cuties-active" %>
+          </li>
+        </ul>
+        <% if @cuties.blank? %>
+          <%= link_to "Add your first cutie by clicking on ME!", new_cuty_path %>
+        <% else %>
+          <%= render "dashboard/user_cuties" %>
+        <% end %>
+
+        <!-- interation -->
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+

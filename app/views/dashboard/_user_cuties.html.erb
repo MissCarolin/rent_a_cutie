@@ -1,0 +1,16 @@
+
+
+<% @cuties.each do |cutie| %>
+  <div class="card-bookings-dashboard">
+    <%= cl_image_tag(cutie.photos[0].key, class: "card-image", crop: :fill ,gravity: :face) %>
+    <div class="card-booking-infos">
+      <div>
+        <h2><%= cutie.name %></h2>
+        <p>This is your cutie!</p>
+      </div>
+      <div class="edit-paw">
+        <%= link_to ('Edit <i class="fas fa-paw"></i>').html_safe, dashboard_cuties_path, class: "create-review" %>
+      </div>
+    <h2 class="card-booking-pricing"><%= cutie.booking_rate %>$/day</h2>
+  </div>
+<% end %>
