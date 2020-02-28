@@ -4,5 +4,7 @@ class DashboardController < ApplicationController
   end
 
   # def cuties
+  #   @cuties = cuties.current_user
   # end
+
 end
