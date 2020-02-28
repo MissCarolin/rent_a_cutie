@@ -12,7 +12,7 @@
         </div>
         <section>
         <div class="card-profile"> <!-- style="width: 16rem;" -->
-          <%= image_tag "https://i.pravatar.cc/300", class: "avatar-profile" %>
+          <%= image_tag "https://images.unsplash.com/photo-1518259102261-b40117eabbc9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", class: "avatar-profile" %>
           <div>
             <div class="seperator"><hr></div>
           </div>
@@ -29,10 +29,10 @@
     <div class="col-8">
         <ul class="list-inline tabs-underlined justify-content-center">
           <li class="tab-in-list">
-            <a href="#" class="tab-underlined active">Bookings</a>
+            <%= link_to "Bookings", dashboard_path, class: "tab-underlined bookings-acvtive" %>
           </li>
           <li class="tab-in-list">
-            <a href="#" class="tab-underlined">Cuties</a>
+            <%= link_to "Cuties", dashboard_cuties_path, class: "tab-underlined" %>
           </li>
         </ul>
       <% @bookings.each do |booking| %>
@@ -46,7 +46,7 @@
             <div class="comment-paw">
               <%= link_to ('Create Review <i class="fas fa-paw"></i>').html_safe, new_booking_review_path(booking), class: "create-review" %>
             </div>
-              <h2 class="card-booking-pricing">150.00 Euro</h2>
+              <h2 class="card-booking-pricing">320.00 $</h2>
           </div>
         <% end %>
     </div>

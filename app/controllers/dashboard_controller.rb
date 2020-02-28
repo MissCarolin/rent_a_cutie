@@ -3,8 +3,9 @@ class DashboardController < ApplicationController
     @bookings = current_user.bookings
   end
 
-  # def cuties
-  #   @cuties = cuties.current_user
-  # end
+  def cuties
+    @user = current_user
+    @cuties = current_user.cuties
+  end
 
 end

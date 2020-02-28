@@ -38,7 +38,7 @@ class CutiesController < ApplicationController
     @cutie = Cutie.new(cutie_params)
     @cutie.user = current_user
     if @cutie.save
-      redirect_to cuties_path
+      redirect_to dashboard_cuties_path # change made here - before: Lino cuties_path
     else
       render :new
     end
