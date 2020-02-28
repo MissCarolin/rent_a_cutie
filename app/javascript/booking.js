@@ -26,10 +26,9 @@ const toggleDateInputs = function() {
       flatpickr(endDateInput, {
         dateFormat: 'd-m-Y',
         disable: unvailableDates,
-        },
       });
-  }
-};
+  };
+}
 
 export { toggleDateInputs }
 
