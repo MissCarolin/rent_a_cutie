@@ -155,3 +155,31 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+.dropdown-menu {
+  font-size: 22px;
+  padding: 1px;
+  text-align: center;
+  font-family: caveat;
+}
+
+@media(max-width: 768px) {
+  .container-home {
+      width: auto;
+  }
+  .footer-copyright {
+    font-size: 15px;
+    text-align: center;
+  }
+  .search-form-control .form-control {
+    height: 4rem;
+  }
+  .navbar-toggler {
+    display: contents;
+  }
+}
+
+// @media(min-width: 300px) {
+// .navbar-expand-sm .navbar-nav .dropdown-menu {
+//     position: absolute;
+// }
+// }
