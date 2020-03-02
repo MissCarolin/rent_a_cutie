@@ -5,18 +5,17 @@
 </head>
 <body>
 
-
 <div class="container">
    <h1> Meet: <%= @cutie.name %> the <%= @cutie.species %> </h1>
    <p class="description"> <%= @cutie.description %> </p>
   <div class="flexbox">
     <div class="photo" >
       <%= cl_image_tag @cutie.photos[0].key, { class: "foto"}  %>
-        </div>
-        <div class="card-booking">
-          <%= render partial:"bookings/booking_form.html.erb", object: @booking, as: :booking %>
-             <br>
-             <div class="reviews">
+    </div>
+      <div class="card-booking">
+        <%= render partial:"bookings/booking_form.html.erb", object: @booking, as: :booking %>
+          <br>
+            <div class="reviews">
               <h4>What other pet lovers say</h4>
               <div class="content_review">
                 <% @bookings.each do |booking| %>
@@ -28,15 +27,14 @@
                     <% end %>
                   </div>
                 </div>
-              <p class="title"> <%= review.title %>!</p>
-              <p class="content"><%= review.content %></p>
-          <% end %>
-          <% end %>
-        </div>
-        </div>
+                <p class="title"> <%= review.title %>!</p>
+                <p class="content"><%= review.content %></p>
+                <% end %>
+                <% end %>
+              </div>
+            </div>
       </div>
     </div>
-
 </div>
 </body>
 </html>
