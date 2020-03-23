@@ -12,7 +12,12 @@
 }
 
 .animal-name {
-  text-allign: center;
+  text-align: center;
+  font-size: 36px;
+}
+
+.mapboxgl-popup-content {
+  padding: 5px;
 }
 
 @media(max-width: 768px) {
