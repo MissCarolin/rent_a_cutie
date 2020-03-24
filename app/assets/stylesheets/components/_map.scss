@@ -20,6 +20,10 @@
   padding: 5px;
 }
 
+.map_location {
+  margin: 0 auto;
+}
+
 @media(max-width: 768px) {
   .mapboxgl-map {
     margin: 0 auto;
