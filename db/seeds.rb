@@ -54,7 +54,7 @@ cutie5 = Cutie.create(name: "Biggi", species: "Koala", description:"Let me sleep
 file = URI.open('https://images.unsplash.com/photo-1504575958497-ccdd586c2997?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2254&q=80')
 cutie5.photos.attach(io: file, filename: 'Biggi.jpeg', content_type: 'image/jpeg')
 
-cutie6 = Cutie.create(name: "Wolfi", species: "Lemur", description:"I can hipnotize with my eyes", user_id: user.id, booking_rate: 99, location: "Am Zoopark 1, 99087 Erfurt")
+cutie6 = Cutie.create(name: "Wolfi", species: "Lemur", description:"I can hypnotize with my eyes", user_id: user.id, booking_rate: 99, location: "Am Zoopark 1, 99087 Erfurt")
 file = URI.open('https://images.unsplash.com/photo-1557079582-afcf05e8e474?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')
 cutie6.photos.attach(io: file, filename: 'Wolfi.jpeg', content_type: 'image/jpeg')
 
@@ -76,15 +76,34 @@ start_date = Date.today + 700
 end_date = start_date + 8
 booking4 = Booking.create!(user_id: user4.id, cutie_id: cutie2.id, start_date: start_date, end_date: end_date)
 
+start_date = Date.today + 800
+end_date = start_date + 3
+booking5 = Booking.create!(user_id: user5.id, cutie_id: cutie5.id, start_date: start_date, end_date: end_date)
+
+start_date = Date.today + 300
+end_date = start_date + 9
+booking6 = Booking.create!(user_id: user4.id, cutie_id: cutie6.id, start_date: start_date, end_date: end_date)
+
+start_date = Date.today + 120
+end_date = start_date + 4
+booking7 = Booking.create!(user_id: user2.id, cutie_id: cutie3.id, start_date: start_date, end_date: end_date)
+
+start_date = Date.today + 180
+end_date = start_date + 4
+booking8 = Booking.create!(user_id: user2.id, cutie_id: cutie4.id, start_date: start_date, end_date: end_date)
+
+
+
 
 puts 'Creating Reviews'
 review = Review.create!(booking_id: booking.id, title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
 review1 = Review.create!(booking_id: booking1.id, title: "A grumpy Cutie", content: "In the beginning a bit grumpy but soon very loving. If you like cats you will love Rainer!", owner_rating: 5, animal_rating: 4)
 review2 = Review.create!(booking_id: booking3.id, title: "So special!", content: "Treat yourself to a special favor and book Stef! You won't regret it", owner_rating: 3, animal_rating: 4)
 review3 = Review.create!(booking_id: booking4.id, title: "Sloth-tastik", content: "I needed someone to calm me down after a stressfull Bootcamp and Stef really did the Job.", owner_rating: 5, animal_rating: 3)
-# review4 = Review.create!(booking_id: booking1.id, title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
-# review5 = Review.create!(booking_id: booking1.id, title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
-# review6 = Review.create!(booking_id: booking1.id, title: "Amazing experience", content: "Booked the animal for my nephew - He really loves it", owner_rating: 5, animal_rating: 5)
+review4 = Review.create!(booking_id: booking5.id, title: "Koala Therapy", content: "coolest and calmest Koala in town!", owner_rating: 5, animal_rating: 4)
+review5 = Review.create!(booking_id: booking6.id, title: "Hypnotising", content: "Let me tell you this: Wolfi truly can hypnotise with his eyes. However he didn't seem to be in the best mood.", owner_rating: 4, animal_rating: 3)
+review6 = Review.create!(booking_id: booking7.id, title: "Great day", content: "Paul is a very special Panda. He is nice and calm and particularily tolerant, even with my 3 year old daughter who loved him equally.", owner_rating: 5, animal_rating: 5)
+review7 = Review.create!(booking_id: booking8.id, title: "Interesting experience", content: "Jana was very fluffy but you should try to train her not to spit at people!", owner_rating: 2, animal_rating: 2)
 
 
 
