@@ -1,6 +1,6 @@
 <div class="container_signin">
 
-<h2>Log in</h2>
+<h2 class="form_ueberschrift">Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
@@ -16,10 +16,14 @@
 
   <div class="form_new">
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, "Log in", class: "btn btn-primary log_in" %>
   </div>
-<% end %>
+  <% end %>
   </div>
-
-<%= render "devise/shared/links" %>
+<div class="link_form">
+<%= render "devise/shared/forgotPassword" %>
+</div>
+<div class="link_form">
+<p style="color: grey">Not a member yet? <%= render "devise/shared/signup" %></p>
+</div>
 </div>

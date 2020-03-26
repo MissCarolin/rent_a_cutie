@@ -1,6 +1,12 @@
 .alert {
-  position: fixed;
+  // position: fixed;
   bottom: 16px;
   right: 16px;
   z-index: 1000;
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
+  margin-top: 40px;
+  text-align: center;
 }
