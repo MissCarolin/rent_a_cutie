@@ -37,7 +37,7 @@
   position: relative;
   width: 60%;
   height: 200px;
-  margin: 20px auto;
+  margin: 0px auto;
 }
 #p-home {
   @include centerer;
@@ -165,6 +165,7 @@
 @media(max-width: 768px) {
   .container-home {
       width: auto;
+      margin: 0px 20px;
   }
   .footer-copyright {
     font-size: 15px;
@@ -175,6 +176,20 @@
   }
   .navbar-toggler {
     display: contents;
+  }
+}
+
+@media(max-width: 422px) {
+  .container-home {
+      width: auto;
+      margin: -50px 20px;
+  }
+}
+
+@media(max-width: 368px) {
+  .container-home {
+      width: auto;
+      margin: -80px 20px;
   }
 }
 
